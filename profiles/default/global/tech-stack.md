@@ -2,6 +2,30 @@
 
 ## Frontend
 
+- **React 18 with TypeScript** – Dynamic UI built with Vite for fast development.
+- **Tailwind CSS** – Utility‑first styling.
+- **Vite** – Development server and bundler.
+- **Responsive Design** – Works on desktop and mobile.
+
+## Backend
+
+- **Node.js with Express** – API server exposing `/api/*` endpoints.
+- **TypeScript** – Type‑safe server code.
+- **Azure Table Storage** – Persistent storage for snapshots and telemetry.
+- **Azure DevOps Integration** – Pulls real‑time metrics and work‑item data.
+
+## Testing
+
+- **Playwright** – End‑to‑end UI and API test suite.
+
+## Other
+
+- **Server‑Sent Events** – Real‑time streaming for health dashboards.
+- **Telemetry Service** – Collects and reports health metrics.
+- **CI/CD** – Integrated with Azure DevOps pipelines.
+
+## Frontend
+
 - **React 18 with TypeScript**: For building a dynamic and interactive user interface.
 - **Tailwind CSS v4**: For modern, utility-first styling.
 - **Vite**: For fast and efficient build tooling.

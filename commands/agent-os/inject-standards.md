@@ -33,13 +33,13 @@ Before injecting standards, determine which scenario we're in. Read the current 
 **Three scenarios:**
 
 1. **Conversation** — Regular chat, implementing code, answering questions
-2. **Creating a Skill** — Building a `.claude/skills/` file
+2. **Creating a Skill** — Building a `agent-instructions/skills/` file
 3. **Shaping/Planning** — In plan mode, building a spec, running `/shape-spec`
 
 **Detection logic:**
 
 - If currently in plan mode OR conversation clearly mentions "spec", "plan", "shape" → **Shaping/Planning**
-- If conversation clearly mentions creating a skill, editing `.claude/skills/`, or building a reusable procedure → **Creating a Skill**
+- If conversation clearly mentions creating a skill, editing `agent-instructions/skills/`, or building a reusable procedure → **Creating a Skill**
 - Otherwise → **Ask to confirm** (do not assume)
 
 **If neither skill nor plan is clearly detected**, use AskUserQuestion to confirm:
@@ -229,7 +229,7 @@ These standards cover:
 
 ### Step 6: Surface Related Skills (Conversation scenario only)
 
-When in conversation scenario, check if `.claude/skills/` exists and contains related skills:
+When in conversation scenario, check if `agent-instructions/skills/` exists and contains related skills:
 
 ```
 Related Skills you might want to use:

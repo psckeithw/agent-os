@@ -180,7 +180,7 @@ Now whenever you need to upgrade your Agent OS project installation (to a new ve
 - Clarified /create-spec command so that task list creation doesn't begin until spec.md has been written.
 - Clarified spec-writer workflow to ensure actual code isn't written in spec.md.
 - Fixed instructions to ensure spec-verification.md is stored in the spec's verication folder.
-- Ensured Claude Code subagents are installed to a project's .claude/agents/agent-os and not sub-folders within that.
+- Ensured Claude Code subagents are installed to a project's agent-instructions/agents/agent-os and not sub-folders within that.
 - Fixed compilation of Claude Code implementer and verifier agents not replacing their dynamic tags.
 - Added instruction in single-agent mode to inform user of next command to run during spec creation process.
 
@@ -317,7 +317,7 @@ This update does away with the old installation script files:
 - setup-claude-code.sh (now you add --claude-code flag to the install commands or enable it in your Agent OS config.yml)
 - setup-cursor.sh (now you add --cursor flag to the install commands or enable it in your Agent OS config.yml)
 
-Claude Code Agent OS commands now should _not_ be installed in the `~/.agent-os/.claude/commands` folder.  Now, these are copied from ~/.agent-os/commands into each project's `~/.claude/commands` folder (this prevents duplicate commands showing in in Claude Code's commands list).  The same approach applies to Claude Code subagents files.
+Claude Code Agent OS commands now should _not_ be installed in the `~/.agent-os/agent-instructions/commands` folder.  Now, these are copied from ~/.agent-os/commands into each project's `~/agent-instructions/commands` folder (this prevents duplicate commands showing in in Claude Code's commands list).  The same approach applies to Claude Code subagents files.
 
 ### Upgrading to version 1.4.0
 
@@ -330,7 +330,7 @@ Follow these steps to update a previous version to 1.4.0:
 3. Run the following to command, which includes flags to overwrite your /instructions (remove the --cursor flag if not using Cursor):
 `curl -sSL https://raw.githubusercontent.com/buildermethods/agent-os/main/setup/base.sh | bash -s -- --overwrite-instructions --claude-code --cursor`
 
-4. If your ~/.claude/commands contain Agent OS commands, remove those and copy the versions that are now in your base installation's commands folder into your _project's_ `.claude/commands` folder.
+4. If your ~/agent-instructions/commands contain Agent OS commands, remove those and copy the versions that are now in your base installation's commands folder into your _project's_ `agent-instructions/commands` folder.
 
 5. Navigate to your project. Run your project installation command to install Agent OS instructions and standards into your project's installation. If your Agent OS base installation is in your system's home folder (like previous versions), then your project installation will be: `~/.agent-os/setup/project.sh`
 
@@ -399,7 +399,7 @@ Follow these steps to update a previous version to 1.4.0:
 - **Standards Files** - Updated for conditional agent usage:
   - `code-style.md` - Uses context-fetcher for loading language-specific style guides
 - **Setup Scripts** - Enhanced to install Claude Code agents:
-  - `setup-claude-code.sh` - Downloads all agents to `~/.claude/agents/` directory
+  - `setup-claude-code.sh` - Downloads all agents to `~/agent-instructions/agents/` directory
 
 ### Improved
 - **Context Efficiency** - Specialized agents use minimal context for their specific tasks

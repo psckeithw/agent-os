@@ -1,0 +1,14 @@
+root:
+  Code-Style: "Code style and conventions"
+  Data-Classification: "Data classification and privacy policy"
+  Discover-Standards: "Guidelines for discovering standards"
+  Git-Workflow: "Standard Git workflow"
+  Index-Standards: "Index file format"
+  Inject-Standards: "Inject standards command usage"
+  Logging-Policy: "Logging policies"
+  Performance: "Performance best practices"
+  Security: "Security guidelines"
+  Typescript: "TypeScript usage guidelines"
+
+global:
+  tech-stack: "Project tech stack description"

@@ -13,6 +13,18 @@ Works alongside Claude Code, Cursor, Antigravity, and other AI tools. Any langua
 - **Shape Spec** — Create better plans that lead to better builds
 - **Index Standards** — Keep your standards organized and discoverable
 
+### Architecture & API
+
+- **Storage**: Local JSON files via `storageAdapter` (default), with future migration paths to Azure Blob JSON or Cosmos DB.
+- **API Endpoints**:
+  - `GET /api/telemetry` – Retrieve telemetry data.
+  - `GET /api/demo/telemetry` – Demo‑only read‑only telemetry (disable in production).
+  - `GET /api/ai/analysis` – AI analysis of logs.
+  - `GET /api/ai/trends` – AI‑generated trend insights.
+  - `GET /api/ai/summary` – Summarized AI insights.
+
+*Documentation aligns with the revised `tech-stack.md`.*
+
 ---
 
 ### Documentation & Installation
